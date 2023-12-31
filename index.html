@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora Estándar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="titulo mb-3"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-calculator" viewBox="0 0 16 16">
+                <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z" /></svg>
+                Calculadora Estándar</h1>
+        <div class="col-md-6 offset-md-3">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td colspan="4">
+                                <input type="text" class="form-control visorCalculadora" name="resultadoVisor" id="resultadoVisor" disabled />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" disabled />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" disabled />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" disabled />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btnEntre" value="/" onclick="division()" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btn7" value="7" onclick="boton(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btn8" value="8" onclick="boton(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btn9" value="9" onclick="boton(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btnPor" value="*" onclick="multiplicacion(value)" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btn4" value="4" onclick="boton(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btn5" value="5" onclick="boton(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btn6" value="6" onclick="boton(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btnMenos" value="-" onclick="resta()" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btn1" value="1" onclick="boton(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btn2" value="2" onclick="boton(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btn3" value="3" onclick="boton(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btnMas" value="+" onclick="suma()" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btnC" value="C" onclick="reset(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btn0" value="0" onclick="boton(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btnPunto" value="." onclick="boton(value)" />
+                            </td>
+                            <td>
+                                <input type="button" class="btn btn-calculadora" id="btnIgual" value="=" onclick="resultado()" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="container col-sm-4 offset-sm-9">By: Aldair Cano Yanez</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

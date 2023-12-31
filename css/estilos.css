@@ -1,0 +1,23 @@
+.titulo {
+    text-align: center;
+}
+
+.btn-calculadora {
+    padding: 10px 20px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .btn-calculadora:hover {
+    background-color: #e9ecef;
+  }
+
+  .visorCalculadora {
+    height: 98px;
+    font-size: 80px;
+    text-align: right;
+    padding-bottom: 15px;
+  }
